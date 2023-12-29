@@ -18,8 +18,8 @@ class Solution {
         ListNode* fast = head;
         while (fast != nullptr) {
             if (fast->val != slow->val) {
+                slow->next = fast;
                 slow = slow->next;
-                slow->val = fast->val;
             }
             fast = fast->next;
         }
